@@ -31,7 +31,7 @@ class App extends React.Component {
         <Entity text={{value: 'Songtitel!', align: 'center', color: 'green'}} position={{x: 0, y: 2, z: -1}}/>
         <Entity primitive="a-box" height={1} width={1} depth={0.1} position={{x:0, y: 2, z: -2}}/>
 
-        <Entity primitive="a-camera">
+        <Entity primitive="a-camera" wasd-controls="enabled: false">
           <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
         </Entity>
       </Scene>
