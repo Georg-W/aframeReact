@@ -11,39 +11,67 @@ import Controls from './components/Controls';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {color: 'red'};
+    this.state = {
+      color: 'red',
+      playing: true
+    };
   }
 
-  changeColor() {
-    const colors = ['red', 'orange', 'yellow', 'green', 'blue'];
-    this.setState({
-      color: colors[Math.floor(Math.random() * colors.length)]
-    });
+  playSong() {
+    console.log("plays song");
   }
 
-  render () {
+  nextSong() {
+    console.log("next song");
+  }
+
+
+  render() {
     return (
       <Scene>
         <a-assets>
-          <img alt="360 picture" id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg"/>
+          <audio id="senja" src="./assets/senja.mp3" preload="auto"/>
           <img alt="sky" id="skyTexture" src="./assets/island.jpg"/>
+
+          <audio id="magnus" src="./assets/magnus.mp3" preload="auto"/>
         </a-assets>
 
         <Entity primitive="a-sky" src="#skyTexture"/>
 
         <Controls
           text={"Press to Play"}
-          position={1}/>
+          action={this.playSong.bind(this)}
+          position={-1}/>
         <Controls
           text={"Next Song"}
-          position={4}/>
+          action={this.nextSong.bind(this)}
+          position={2}/>
+
+        <Entity sound="src: url(./assets/senja)" autoplay={true}/>
 
         <Entity primitive="a-camera" wasd-controls="enabled: false">
-          <Entity primitive="a-cursor" animation__click={{property: 'scale', startEvents: 'click', from: '0.1 0.1 0.1', to: '1 1 1', dur: 150}}/>
+          <Entity primitive="a-cursor" animation__click={{
+            property: 'scale',
+            startEvents: 'click',
+            from: '0.1 0.1 0.1',
+            to: '1 1 1',
+            dur: 1000
+          }}/>
         </Entity>
       </Scene>
     );
+
+    function RenderAudio (){
+      if (this.state.playing === true) {
+        return (
+          <Entity sound="src: #senja"/>
+        )
+      }
+      else {
+        return (null);
+      }
+    }
   }
 }
 
-ReactDOM.render(<App/>, document.querySelector('#sceneContainer'));
+  ReactDOM.render(<App/>,document.querySelector('#sceneContainer'));
