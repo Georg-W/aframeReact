@@ -15,7 +15,8 @@ class App extends React.Component {
       color: 'red',
       playing: false,
       playingMessage: "Press to Play",
-      song: "magnus"
+      song: "magnus",
+      image: 1,
     };
   }
 
@@ -60,6 +61,21 @@ class App extends React.Component {
     }
   }
 
+  nextImage() {
+    console.log("next image");
+
+    if(this.state.image === 1){
+      this.setState({
+        image: 2
+      });
+    }
+    else{
+      this.setState({
+        image: 1
+      });
+    }
+  }
+
 
 
   render() {
@@ -72,30 +88,44 @@ class App extends React.Component {
       song = <Entity id="song" sound="src: #senja"/>;
     }
 
+    let image;
+    if(this.state.image === 1){
+      image = <Entity primitive="a-sky" radius="11" src="#skyTexture1"/>
+    }
+    else{
+      image = <Entity primitive="a-sky" radius="11" src="#skyTexture2"/>
+    }
+
 
     return (
 
       <Scene>
         <a-assets>
-          <img alt="sky" id="skyTexture" src="./assets/background.jpg"/>
+          <img alt="sky" id="skyTexture1" src="./assets/background.jpg"/>
+          <img alt="sky" id="skyTexture2" src="./assets/island.jpg"/>
           <audio id="senja" src="./assets/senja.mp3"/>
           <audio id="magnus" src="./assets/magnus.mp3"/>
         </a-assets>
 
+        {image}
+
         {song}
 
-        <Entity primitive="a-sky" src="#skyTexture"/>
 
-        <Controls
-          text={this.state.playingMessage}
-          action={this.playSong.bind(this)}
-          position={-1}/>
         <Controls
           text={"Next Song"}
           action={this.nextSong.bind(this)}
-          position={10}/>
+          position={-3}/>
+        <Controls
+          text={this.state.playingMessage}
+          action={this.playSong.bind(this)}
+          position={0}/>
+        <Controls
+          text={"Next Image"}
+          action={this.nextImage.bind(this)}
+          position={3}/>
 
-        <Entity primitive="a-camera" wasd-controls="enabled: false">
+        <Entity primitive="a-camera" wasd-controls="enabled: true">
           <Entity primitive="a-cursor" animation__click={{
             property: 'scale',
             startEvents: 'click',
@@ -106,9 +136,8 @@ class App extends React.Component {
         </Entity>
       </Scene>
     );
-
-
   }
 }
+
 
   ReactDOM.render(<App/>,document.querySelector('#sceneContainer'));

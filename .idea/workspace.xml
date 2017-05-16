@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="55e9439f-e9da-4544-8c2b-d653f27c4016" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/castle.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/castle2.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/kufstein.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/assets/kufstein2.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Controls.js" afterPath="$PROJECT_DIR$/src/components/Controls.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/index.js" afterPath="$PROJECT_DIR$/src/index.js" />
     </list>
@@ -29,10 +24,11 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="444">
-              <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+            <state relative-caret-position="464">
+              <caret line="125" column="21" lean-forward="false" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
               <folding>
-                <element signature="n#!!block;n#playSong#0;n#App#0" expanded="false" />
+                <element signature="e#627#773#0" expanded="false" />
+                <element signature="e#847#920#0" expanded="false" />
                 <element signature="n#!!block;n#nextSong#0;n#App#0" expanded="false" />
               </folding>
             </state>
@@ -295,12 +291,12 @@
       <workItem from="1494797035416" duration="52000" />
       <workItem from="1494838414997" duration="8103000" />
       <workItem from="1494931668691" duration="21000" />
-      <workItem from="1494946774863" duration="7270000" />
+      <workItem from="1494946774863" duration="8218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24068000" />
+    <option name="totallyTimeSpent" value="25016000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -341,7 +337,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#playSong#0;n#App#0" expanded="false" />
+            <element signature="e#627#773#0" expanded="false" />
+            <element signature="e#847#920#0" expanded="false" />
             <element signature="n#!!block;n#nextSong#0;n#App#0" expanded="false" />
           </folding>
         </state>
@@ -370,7 +367,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#playSong#0;n#App#0" expanded="false" />
+            <element signature="e#627#773#0" expanded="false" />
+            <element signature="e#847#920#0" expanded="false" />
             <element signature="n#!!block;n#nextSong#0;n#App#0" expanded="false" />
           </folding>
         </state>
@@ -406,7 +404,8 @@
         <state relative-caret-position="696">
           <caret line="30" column="100" lean-forward="false" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
           <folding>
-            <element signature="n#!!block;n#playSong#0;n#App#0" expanded="false" />
+            <element signature="e#627#773#0" expanded="false" />
+            <element signature="e#847#920#0" expanded="false" />
             <element signature="n#!!block;n#nextSong#0;n#App#0" expanded="false" />
           </folding>
         </state>
@@ -424,7 +423,8 @@
         <state relative-caret-position="870">
           <caret line="30" column="100" lean-forward="false" selection-start-line="30" selection-start-column="100" selection-end-line="30" selection-end-column="100" />
           <folding>
-            <element signature="n#!!block;n#playSong#0;n#App#0" expanded="false" />
+            <element signature="e#627#773#0" expanded="false" />
+            <element signature="e#847#920#0" expanded="false" />
             <element signature="n#!!block;n#nextSong#0;n#App#0" expanded="false" />
           </folding>
         </state>
@@ -442,7 +442,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!block;n#playSong#0;n#App#0" expanded="false" />
+            <element signature="e#627#773#0" expanded="false" />
+            <element signature="e#847#920#0" expanded="false" />
             <element signature="n#!!block;n#nextSong#0;n#App#0" expanded="false" />
           </folding>
         </state>
@@ -493,10 +494,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="444">
-          <caret line="101" column="32" lean-forward="true" selection-start-line="101" selection-start-column="32" selection-end-line="101" selection-end-column="32" />
+        <state relative-caret-position="464">
+          <caret line="125" column="21" lean-forward="false" selection-start-line="125" selection-start-column="21" selection-end-line="125" selection-end-column="21" />
           <folding>
-            <element signature="n#!!block;n#playSong#0;n#App#0" expanded="false" />
+            <element signature="e#627#773#0" expanded="false" />
+            <element signature="e#847#920#0" expanded="false" />
             <element signature="n#!!block;n#nextSong#0;n#App#0" expanded="false" />
           </folding>
         </state>
