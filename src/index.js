@@ -3,6 +3,7 @@ import 'aframe-animation-component';
 import 'aframe-particle-system-component';
 import 'babel-polyfill';
 import {Entity, Scene} from 'aframe-react';
+require('aframe-video-controls');
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -99,18 +100,22 @@ class App extends React.Component {
 
     return (
 
-      <Scene>
+      <Scene stats>
         <a-assets>
           <img alt="sky" id="skyTexture1" src="./assets/background.jpg"/>
           <img alt="sky" id="skyTexture2" src="./assets/island.jpg"/>
           <audio id="senja" src="./assets/senja.mp3"/>
           <audio id="magnus" src="./assets/magnus.mp3"/>
+          <video id="planet" autoPlay loop src="./assets/planet.mp4"/>
         </a-assets>
 
         {image}
 
         {song}
 
+        <a-video src="#planet" width="16" height="9" position="0 0 -6"/>
+
+        <a-entity video-controls="src:#planet"/>
 
         <Controls
           text={"Next Song"}
