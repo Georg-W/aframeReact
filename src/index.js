@@ -102,11 +102,11 @@ class App extends React.Component {
 
       <Scene stats>
         <a-assets>
-          <img alt="sky" id="skyTexture1" src="./assets/background.jpg"/>
-          <img alt="sky" id="skyTexture2" src="./assets/island.jpg"/>
-          <audio id="senja" src="./assets/senja.mp3"/>
-          <audio id="magnus" src="./assets/magnus.mp3"/>
-          <video id="planet" autoPlay loop src="./assets/planet.mp4"/>
+          <img alt="sky" crossOrigin="anonymous" id="skyTexture1" src="./assets/background.jpg"/>
+          <img alt="sky" crossOrigin="anonymous" id="skyTexture2" src="./assets/island.jpg"/>
+          <audio id="senja" crossOrigin="anonymous" src="./assets/senja.mp3"/>
+          <audio id="magnus" crossOrigin="anonymous" src="./assets/magnus.mp3"/>
+          <video id="planet" crossOrigin="anonymous" autoPlay loop src="./assets/planet.mp4"/>
         </a-assets>
 
         {image}
