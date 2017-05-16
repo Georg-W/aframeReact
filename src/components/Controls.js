@@ -16,11 +16,11 @@ export default class Controls extends React.Component {
         height={2}
         width={2}
         depth={0.1}
-        color="#455A64"
+        color="#84bd00"
         position={{x:this.props.position, y: 2, z: -5}}
         events={{click: this.props.action}}/>
       <Entity
-        text={{value: this.props.text, color: "#FFF59D", width: 5, height: 5, align: "center"}}
+        text={{value: this.props.text, color: "#000000", width: 5, height: 5, align: "center"}}
         events={{click: this.props.action}}
         position={{x:this.props.position, y: 2, z: -4.89}}/>
     </Entity>

@@ -13,41 +13,84 @@ class App extends React.Component {
     super(props);
     this.state = {
       color: 'red',
-      playing: true
+      playing: false,
+      playingMessage: "Press to Play",
+      song: "magnus"
     };
   }
 
   playSong() {
     console.log("plays song");
+    let entity = document.querySelector('[sound]');
+    if(this.state.playing) {
+      entity.components.sound.pauseSound();
+      this.setState({
+        playing: false,
+        playingMessage: "Press to Play"
+      })
+    }
+    else{
+      entity.components.sound.playSound();
+      this.setState({
+        playing: true,
+        playingMessage: "Press to Pause"
+      })
+    }
   }
 
   nextSong() {
     console.log("next song");
+    if(this.state.song === "magnus"){
+      this.setState({
+        playing: false,
+        playingMessage: "Press to Play",
+        song: "senja"
+      })
+    }
+    else{
+      this.setState({
+        playing: false,
+        playingMessage: "Press to Play",
+        song: "magnus"
+      })
+    }
+
   }
 
 
+
   render() {
+
+    let song;
+    if(this.state.song === "magnus"){
+      song = <a-entity id="song" sound="src: #magnus"/>;
+    }
+    else{
+      song = <a-entity id="song" sound="src: #senja"/>;
+    }
+
     return (
+
       <Scene>
         <a-assets>
-          <audio id="senja" src="./assets/senja.mp3" preload="auto"/>
           <img alt="sky" id="skyTexture" src="./assets/island.jpg"/>
+          <audio id="senja" src="./assets/senja.mp3"/>
+          <audio id="magnus" src="./assets/magnus.mp3"/>
 
-          <audio id="magnus" src="./assets/magnus.mp3" preload="auto"/>
         </a-assets>
+
+        {song}
 
         <Entity primitive="a-sky" src="#skyTexture"/>
 
         <Controls
-          text={"Press to Play"}
+          text={this.state.playingMessage}
           action={this.playSong.bind(this)}
           position={-1}/>
         <Controls
           text={"Next Song"}
           action={this.nextSong.bind(this)}
           position={2}/>
-
-        <Entity sound="src: url(./assets/senja)" autoplay={true}/>
 
         <Entity primitive="a-camera" wasd-controls="enabled: false">
           <Entity primitive="a-cursor" animation__click={{
@@ -61,16 +104,7 @@ class App extends React.Component {
       </Scene>
     );
 
-    function RenderAudio (){
-      if (this.state.playing === true) {
-        return (
-          <Entity sound="src: #senja"/>
-        )
-      }
-      else {
-        return (null);
-      }
-    }
+
   }
 }
 
