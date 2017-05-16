@@ -42,19 +42,22 @@ class App extends React.Component {
     console.log("next song");
     if(this.state.song === "magnus"){
       this.setState({
-        playing: false,
-        playingMessage: "Press to Play",
-        song: "senja"
-      })
+        song: "senja",
+        playing: true,
+        playingMessage: "Press to Pause"
+      });
+      console.log("next pressed senja");
+      this.playSong();
     }
     else{
       this.setState({
-        playing: false,
-        playingMessage: "Press to Play",
-        song: "magnus"
-      })
+        song: "magnus",
+        playing: true,
+        playingMessage: "Press to Pause"
+      });
+      console.log("next pressed magnus");
+      this.playSong();
     }
-
   }
 
 
@@ -63,11 +66,12 @@ class App extends React.Component {
 
     let song;
     if(this.state.song === "magnus"){
-      song = <a-entity id="song" sound="src: #magnus"/>;
+      song = <Entity id="song" sound="src: #magnus"/>;
     }
     else{
-      song = <a-entity id="song" sound="src: #senja"/>;
+      song = <Entity id="song" sound="src: #senja"/>;
     }
+
 
     return (
 
@@ -76,7 +80,6 @@ class App extends React.Component {
           <img alt="sky" id="skyTexture" src="./assets/island.jpg"/>
           <audio id="senja" src="./assets/senja.mp3"/>
           <audio id="magnus" src="./assets/magnus.mp3"/>
-
         </a-assets>
 
         {song}
