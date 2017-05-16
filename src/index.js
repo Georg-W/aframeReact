@@ -77,7 +77,7 @@ class App extends React.Component {
 
       <Scene>
         <a-assets>
-          <img alt="sky" id="skyTexture" src="./assets/island.jpg"/>
+          <img alt="sky" id="skyTexture" src="./assets/background.jpg"/>
           <audio id="senja" src="./assets/senja.mp3"/>
           <audio id="magnus" src="./assets/magnus.mp3"/>
         </a-assets>
@@ -93,7 +93,7 @@ class App extends React.Component {
         <Controls
           text={"Next Song"}
           action={this.nextSong.bind(this)}
-          position={2}/>
+          position={10}/>
 
         <Entity primitive="a-camera" wasd-controls="enabled: false">
           <Entity primitive="a-cursor" animation__click={{
