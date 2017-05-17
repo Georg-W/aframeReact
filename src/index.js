@@ -106,16 +106,16 @@ class App extends React.Component {
           <img alt="sky" id="skyTexture2" src="./assets/island.jpg"/>
           <audio id="senja" src="./assets/senja.mp3"/>
           <audio id="magnus" src="./assets/magnus.mp3"/>
-          <video id="planet" autoPlay loop src="./assets/planet.mp4"/>
+          <video id="slothy" autoPlay loop src="./assets/slothy.mp4"/>
         </a-assets>
 
         {image}
 
         {song}
 
-        <a-video src="#planet" width="16" height="9" position="0 0 -6"/>
+        <a-video src="#slothy" width="4" height="3" position="-6 0.8 -7.5" rotation="0 38 0"/>
 
-        <a-entity video-controls="src:#planet"/>
+        <a-entity video-controls="src:#slothy"/>
 
         <Controls
           text={"Next Song"}
