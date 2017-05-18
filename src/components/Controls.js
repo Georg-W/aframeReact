@@ -6,13 +6,12 @@ import React from 'react';
 
 export default class Controls extends React.Component {
 
-
-
   render () {
     return (
     <Entity>
       <Entity
-        primitive="a-box"
+        primitive="a-circle"
+        metalness={1}
         height={2}
         width={2}
         depth={0.1}

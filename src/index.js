@@ -16,7 +16,7 @@ class App extends React.Component {
       color: 'red',
       playing: false,
       playingMessage: "Press to Play",
-      song: "magnus",
+      song: "senja",
       image: 1,
     };
   }
@@ -77,6 +77,13 @@ class App extends React.Component {
     }
   }
 
+  loadingFinished(){
+    console.log("finished loading");
+  }
+
+  loading(){
+    console.log("loading");
+  }
 
 
   render() {
@@ -91,29 +98,29 @@ class App extends React.Component {
 
     let image;
     if(this.state.image === 1){
-      image = <Entity primitive="a-sky" radius="11" src="#skyTexture1"/>
+      image = <Entity primitive="a-sky" radius="202" src="#skyTexture1"/>
     }
     else{
-      image = <Entity primitive="a-sky" radius="11" src="#skyTexture2"/>
+      image = <Entity primitive="a-sky" radius="22" src="#skyTexture2"/>
     }
 
 
     return (
 
       <Scene stats>
-        <a-assets>
-          <img alt="sky" id="skyTexture1" src="./assets/background.jpg"/>
-          <img alt="sky" id="skyTexture2" src="./assets/island.jpg"/>
-          <audio id="senja" src="./assets/senja.mp3"/>
-          <audio id="magnus" src="./assets/magnus.mp3"/>
-          <video id="slothy" autoPlay loop src="./assets/slothy.mp4"/>
+        <a-assets onLoad={this.loading()}  onLoadedData={this.loadingFinished()}>
+          <img alt="sky" id="skyTexture1" src="./assets/back1.jpg"/>
+          <img alt="sky" id="skyTexture2" src="./assets/nature.jpg"/>
+          <audio id="senja" src="./assets/epic.mp3"/>
+          <audio id="magnus" src="./assets/heia.mp3"/>
+          <video id="slothy" loop src="./assets/planet2.mp4"/>
         </a-assets>
 
         {image}
 
         {song}
 
-        <a-video src="#slothy" width="4" height="3" position="-6 0.8 -7.5" rotation="0 38 0"/>
+        <a-video src="#slothy" width="16" height="9" position="0 6.5 -13" rotation="0 0 0"/>
 
         <a-entity video-controls="src:#slothy"/>
 
